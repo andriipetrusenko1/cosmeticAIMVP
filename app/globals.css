@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  
+  /* Custom ULAB Colors */
+  --blush-pink: 247, 218, 217;
+  --rose-gold: 183, 110, 121;
+  --pearl-white: 252, 250, 249;
+  --charcoal-gray: 51, 51, 51;
+  --mint-cream: 230, 245, 242;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: var(--blush-pink);
+    --primary-foreground: var(--charcoal-gray);
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: var(--rose-gold);
+    --accent-foreground: var(--pearl-white);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: var(--rose-gold);
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 1rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: var(--blush-pink);
+    --primary-foreground: var(--charcoal-gray);
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: var(--rose-gold);
+    --accent-foreground: var(--pearl-white);
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: var(--rose-gold);
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: rgb(var(--pearl-white));
+    color: rgb(var(--charcoal-gray));
+  }
+  
+  /* Custom Styling */
+  .bg-pearl-white {
+    background-color: rgb(var(--pearl-white));
+  }
+  .bg-blush-pink {
+    background-color: rgb(var(--blush-pink));
+  }
+  .bg-rose-gold {
+    background-color: rgb(var(--rose-gold));
+  }
+  .text-blush-pink {
+    color: rgb(var(--blush-pink));
+  }
+  .text-rose-gold {
+    color: rgb(var(--rose-gold));
+  }
+  .text-charcoal {
+    color: rgb(var(--charcoal-gray));
+  }
+  .text-mint-cream {
+    color: rgb(var(--mint-cream));
+  }
+  .border-blush-pink {
+    border-color: rgb(var(--blush-pink));
+  }
+  .border-rose-gold {
+    border-color: rgb(var(--rose-gold));
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
