@@ -25,11 +25,9 @@ export function Navigation() {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/' },
-      { name: 'Checkout', path: '/checkout' },
-    { name: 'Upload', path: '/upload' },
-    { name: 'AdminDashboard', path: '/admin' },
-
+    { name: 'About', path: '#' },
+    { name: 'How It Works', path: '#' },
+    { name: 'FAQ', path: '#' },
   ];
   
   return (
@@ -69,6 +67,11 @@ export function Navigation() {
             <Link href="/upload">
               <Button className="bg-rose-gold hover:bg-rose-gold/90 text-black">
                 Get Started
+              </Button>
+            </Link>
+            <Link href="/admin">
+              <Button className="bg-rose-gold hover:bg-rose-gold/90 text-black">
+                AdminDashboard
               </Button>
             </Link>
           </div>
@@ -119,6 +122,11 @@ export function Navigation() {
               <Link href="/upload">
                 <Button className="w-full bg-rose-gold hover:bg-rose-gold/90 text-black">
                   Get Started
+                </Button>
+              </Link>
+              <Link href="/admin">
+                <Button className="w-full bg-rose-gold hover:bg-rose-gold/90 text-black">
+                  Dashboard
                 </Button>
               </Link>
             </div>
