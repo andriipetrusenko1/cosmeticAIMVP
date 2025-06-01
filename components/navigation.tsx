@@ -26,9 +26,7 @@ export function Navigation() {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/' },
-    { name: 'How It Works', path: '/' },
-    { name: 'FAQ', path: '/' },
-    { name: 'Checkout', path: '/checkout' },
+      { name: 'Checkout', path: '/checkout' },
     { name: 'Upload', path: '/upload' },
     { name: 'AdminDashboard', path: '/admin' },
 
