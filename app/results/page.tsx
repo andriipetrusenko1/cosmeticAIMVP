@@ -84,6 +84,12 @@ export default function ResultsPage() {
       
       <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
         <Button 
+          onClick={() => router.push('/formula/123')}
+          className="bg-rose-gold hover:bg-rose-gold/90 text-black px-8 py-6 rounded-full text-lg"
+        >
+          ULAB Formula
+        </Button>
+        <Button 
           onClick={() => router.push('/checkout?plan=subscription')}
           className="bg-rose-gold hover:bg-rose-gold/90 text-black px-8 py-6 rounded-full text-lg"
         >
