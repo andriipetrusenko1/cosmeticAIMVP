@@ -38,11 +38,13 @@ export function HeroSection() {
           transition={{ delay: 0.6, duration: 0.5 }}
           className="inline-block"
         >
-          <Link href="/upload">
-            <Button className="bg-rose-gold hover:bg-rose-gold/90 text-black px-8 py-6 rounded-full text-lg">
-              Start Your Skin Analysis
-            </Button>
-          </Link>
+         <Link href="/upload">
+          <Button
+            className="bg-rose-gold hover:bg-rose-gold/90 text-black px-8 py-6 rounded-full text-lg shadow-lg border-2 border-rose-gold transition-transform hover:scale-105"
+          >
+            Start Your Skin Analysis
+          </Button>
+        </Link>
         </motion.div>
         
         <motion.div
